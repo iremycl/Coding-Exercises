@@ -9,11 +9,9 @@ def triangle(a,b):
 
 triangle(3,5)
 
-import pandas as pd
 
-ex_trio = pd.read_csv("rosalind_ini2.txt", delimiter=" ")
-ex_trio = list(vals for vals in ex_trio)
-triangle(int(ex_trio[0]),int(ex_trio[1]))
-print(ex_trio)
-ex_trio[0]
+ex_trio = open("rosalind_ini2.txt").read().replace('\n',"")
+ex_trio = [int(vals) for vals in ex_trio.split()]
+triangle(ex_trio[0],ex_trio[1])
+
 
