@@ -1,0 +1,19 @@
+def triangle(a,b):
+    """
+    Given: Two positive integers a and b, each less than 1000.
+    Return: The integer corresponding to the square of the hypotenuse of the right triangle whose legs have lengths a and b.
+
+    """
+    
+    return (a**2 + b**2)
+
+triangle(3,5)
+
+import pandas as pd
+
+ex_trio = pd.read_csv("rosalind_ini2.txt", delimiter=" ")
+ex_trio = list(vals for vals in ex_trio)
+triangle(int(ex_trio[0]),int(ex_trio[1]))
+print(ex_trio)
+ex_trio[0]
+
