@@ -1,0 +1,16 @@
+def fib_num(n):
+    """Given: A positive integer n≤25.
+        Return: The value of Fn."""
+
+    if n == 0:
+        fn = 0
+    elif n == 1:
+        fn = 1
+    else:
+        fn=fib_num(n-1) + fib_num(n-2)
+
+    return fn
+
+fib_num(20)
+
+
