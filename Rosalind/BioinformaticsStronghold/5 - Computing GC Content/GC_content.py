@@ -1,12 +1,18 @@
 def gc_content(seq):
-    #Given a DNA seq, 
+    """
+    Given one DNA seq, calculate the GC content.
+    """
     A,C,G,T = seq.count("A"),seq.count("C"),seq.count("G"),seq.count("T")
     return round(((C + G) / (A+C+G+T) * 100), 5)
 
+#A quick example for the above function
 gc_content("CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGACTGGGAACCTGCGGGCAGTAGGTGGAAT")
 
 #Create empty dictionary to hold gc contents
 def gc_test(fastatxt):
+    """
+    Given a file with many reads, calculate the GC content of each read
+    """
     gc_cont = {}#Create empty dictionary to hold gc contents
     data = str(fastatxt) 
     with open(data, "r+") as a:
